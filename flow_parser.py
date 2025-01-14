@@ -131,6 +131,12 @@ def main(flow_log_path, lookup_csv_path):
 if __name__ == "__main__":
 
     flow_log_file = 'flow_log.txt'
-    lookup_csv_file = 'lookup.txt'
+    lookup_csv_file = 'lookup.csv'
     main(flow_log_file, lookup_csv_file)
+
+
+# In[ ]:
+
+
+
 
