@@ -19,7 +19,7 @@ This program parses AWS VPC Flow Logs (version 2 only) in the default log format
 Make sure to have both txt and CSV file downloaded and in the same location.
 If doing through command prompt navigate to the file location of the python and txt files you downloaded.
 * Through command prompt: python flow_parser.py
-* Within Jupyter Notebook: Type "!python flow_parser.py" into a a cell" and run. Can also run the notebook that is provided in the repository in Jupyter Notebooks.
+* Within Jupyter Notebook: Type "!python flow_parser.py" into a a cell and run. Can also run the notebook that is provided in the repository in Jupyter Notebooks.
 ## 5. Tests Performed
 Tested with the sample flow logs with entries such as 
 * 2 123456789012 eni-0a1b2c3d 10.0.1.201 198.51.100.2 443 49153 6 25 20000 1620140761 1620140821 ACCEPT OK
