@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import csv
 from collections import defaultdict
 
 
-# In[2]:
+# In[ ]:
 
 
 # Common protocol number -> name mappings
@@ -20,7 +20,7 @@ PROTO_MAP = {
 }
 
 
-# In[3]:
+# In[ ]:
 
 
 def load_lookup_table(lookup_csv_path):
@@ -69,7 +69,7 @@ def parse_flow_log_line(line):
     }
 
 
-# In[4]:
+# In[ ]:
 
 
 def main(flow_log_path, lookup_csv_path):
@@ -125,12 +125,12 @@ def main(flow_log_path, lookup_csv_path):
         print(f"{port},{proto},{cnt}")
 
 
-# In[5]:
+# In[ ]:
 
 
 if __name__ == "__main__":
 
     flow_log_file = 'flow_log.txt'
-    lookup_csv_file = 'lookup.csv'
+    lookup_csv_file = 'lookup.txt'
     main(flow_log_file, lookup_csv_file)
 
