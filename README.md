@@ -4,6 +4,7 @@ This program parses AWS VPC Flow Logs (version 2 only) in the default log format
 * A summary of tag counts.
 * A summary of port/protocol combination counts.
 ## 2. Assumptions
+* The files used are txt and csv files generated from the examples given. 
 * Only supports AWS VPC Flow Logs version 2. Any other version lines are ignored.
 * Default log format (fields are space-separated in the order: version, account-id, eni-id, srcaddr, dstaddr, srcport, dstport, protocol, packets, bytes, start, end, action, log-status).
 * Protocol is a numeric field in the log (e.g., 6 for TCP, 17 for UDP, 1 for ICMP). If the numeric protocol is unknown, it’s treated as a string.
