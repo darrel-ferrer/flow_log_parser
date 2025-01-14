@@ -4,11 +4,11 @@ This program parses AWS VPC Flow Logs (version 2 only) in the default log format
 * A summary of tag counts.
 * A summary of port/protocol combination counts.
 ## 2. Assumptions
-* The files used are txt and csv files generated from the examples given. 
+* The files used are txt files generated from the examples given. 
 * Only supports AWS VPC Flow Logs version 2. Any other version lines are ignored.
 * Default log format (fields are space-separated in the order: version, account-id, eni-id, srcaddr, dstaddr, srcport, dstport, protocol, packets, bytes, start, end, action, log-status).
 * Protocol is a numeric field in the log (e.g., 6 for TCP, 17 for UDP, 1 for ICMP). If the numeric protocol is unknown, it’s treated as a string.
-* The lookup CSV contains three columns: dstport, protocol, tag. This is case-insensitive when matching (dstport, protocol) to a tag.
+* The lookup txt contains three columns: dstport, protocol, tag. This is case-insensitive when matching (dstport, protocol) to a tag.
 * Entries not found in the lookup table get tagged as "Untagged".
 * The file size limit for flow logs is up to 10 MB (based on the requirement), but we do not explicitly check the file size—this is simply a stated assumption for typical usage.
 * The lookup file can have up to 10,000 mappings, which we handle in-memory as a Python dictionary.
@@ -17,7 +17,7 @@ This program parses AWS VPC Flow Logs (version 2 only) in the default log format
 * No external libraries. We rely only on built-in Python modules (csv, collections).
 ## 4. How to Use
 Make sure to have both txt and CSV file downloaded and in the same location.
-If doing through command prompt navigate to the file location of the python, csv, and txt files you downloaded.
+If doing through command prompt navigate to the file location of the python and txt files you downloaded.
 * Through command prompt: python flow_parser.py
 * Within Jupyter Notebook: Type "!python flow_parser.py" into a a cell" and run. Can also run the notebook that is provided in the repository in Jupyter Notebooks.
 ## 5. Tests Performed
