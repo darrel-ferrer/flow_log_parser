@@ -1,4 +1,4 @@
-# flow_parser
+# flow_log_parser
 ## 1. Overview
 This program parses AWS VPC Flow Logs (version 2 only) in the default log format and applies tags to each log entry based on a provided lookup CSV. The output consists of:
 * A summary of tag counts.
