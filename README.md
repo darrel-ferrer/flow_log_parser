@@ -11,7 +11,7 @@ This program parses AWS VPC Flow Logs (version 2 only) in the default log format
 * The lookup txt contains three columns: dstport, protocol, tag. This is case-insensitive when matching (dstport, protocol) to a tag.
 * Entries not found in the lookup table get tagged as "Untagged".
 * The file size limit for flow logs is up to 10 MB (based on the requirement), but we do not explicitly check the file size—this is simply a stated assumption for typical usage.
-* The lookup file can have up to 8,000 mappings, which we handle in-memory as a Python dictionary.
+* The lookup file can have up to 10,000 mappings, which we handle in-memory as a Python dictionary.
 ## 3. Requirements and Dependencies
 * Python 3 (tested with Python 3.6+).
 * No external libraries. We rely only on built-in Python modules (csv, collections).
